@@ -1,0 +1,34 @@
+图形化客户端：sourcetree
+下载:
+	https://www.sourcetreeapp.com/
+安装:
+	由于种种不可描述的原因，无法注册账号且无法登陆所以需要绕过登陆
+绕过登陆:
+	去到 C:\Users\当前用户目录\AppData\Local\Atlassian\SourceTree 目录下
+	新建 accounts.json 文件
+	将一下内容复制进去
+	[
+	  {
+	    "$id": "1",
+	    "$type": "SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity",
+	    "Authenticate": true,
+	    "HostInstance": {
+	      "$id": "2",
+	      "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountInstance, SourceTree.Host.AtlassianAccount",
+	      "Host": {
+	        "$id": "3",
+	        "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountHost, SourceTree.Host.AtlassianAccount",
+	        "Id": "atlassian account"
+	      },
+	      "BaseUrl": "https://id.atlassian.com/"
+	    },
+	    "Credentials": {
+	      "$id": "4",
+	      "$type": "SourceTree.Model.BasicAuthCredentials, SourceTree.Api.Account",
+	      "Username": "",
+	      "Email": null
+	    },
+	    "IsDefault": false
+	  }
+	]
+

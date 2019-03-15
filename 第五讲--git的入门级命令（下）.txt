@@ -1,0 +1,36 @@
+为什么建议使用命令行的方式操作git？
+	1.命令行会了，图形界面的操作时完全没问题的，反之，则不然
+    2.有些地方如linux服务器，没有图形界面，如果碰到问题需要使用git，不会命令行操作啥都干不了
+
+git 本地操作
+git --help
+    调出Git的帮助文档
+git +命令 --help
+    查看某个具体命令的帮助文档
+git --version
+    查看git的版本
+git init 
+    生成空的本地仓库
+git add
+    将文件添加到暂存区
+
+初次commit之前，需要配置用户邮箱及用户名，使用以下命令：
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+git commit 
+    将暂存区里的文件提交到本地仓库
+
+git remote
+    用于管理远程仓库
+
+git push -u origin master
+    往名字为origin的仓库的master分支上提交变更
+git fetch
+    拉取远程仓库的变更到本地仓库
+git merge origin/master
+    将远程的变更，合并到本地仓库的master分支
+git pull
+    -- 不建议使用  等同于fetch之后merge
+
+
+

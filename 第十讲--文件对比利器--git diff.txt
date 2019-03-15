@@ -1,0 +1,33 @@
+diff -->difference的缩写，用于比较差异
+使用场景：
+	1、解决冲突
+	2、制作补丁
+git diff 不加任何参数  用于比较当前工作区跟暂存区的差异
+git diff --cached 或者--staged 
+git diff HEAD 
+git diff 分支名  查看当前分支跟指定的分支的差异
+git diff 分支名1 分支名2 查看两个指定分支(已提交的)的差异，分支2 跟分支1的差别
+git diff 文件名 查看指定文件的差异
+git diff commitid1 commitid2 用于列出两个历史提交的差异
+git diff --stat 用于罗列有变更的文件
+
+
+diff --git a/file2 b/file2  file2的两个版本
+index c200906..29e2b3c 100644
+--- a/file2 表示变更前的文件
++++ b/file2 表示当前文件
+@@ -1 +1,2 @@  变更前的文件的第一行  变更之后的文件的第一行往下两行 这块文件区域有差异
+ 222
++111    +表示新增了一行 -表示删除了一行  如果对一行内容进行修改，在此处体现出来的就是先删除一行，再新增一行
+
+
+
+diff --git a/file2 b/file2
+index 29e2b3c..2e2f5e4 100644
+--- a/file2
++++ b/file2
+@@ -1,2 +1,3 @@
+ 222
++333
+ 111
+

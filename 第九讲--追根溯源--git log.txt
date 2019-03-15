@@ -1,0 +1,17 @@
+log命令的作用：
+	用于查看git的提交历史
+git log命令显示的信息的具体含义
+	commit 4a70ceb24b6849ad830d6af5126c9227b333d2d1 --SHA-1 校验和  commit id
+	Author: wiggin <wiggin@gmail.com>  --作者跟邮箱概要信息
+	Date:   Wed May 16 23:51:02 2018 +0800 --提交时间
+
+    v2  --commit的时候，使用-m选项说写一段概要说明
+    日常在使用commit的时候，-m选项所写得内容一定不能随便写
+    “修改了登陆的bug”--》“新增用户管理中心”
+git log -数字  表示查看最近几次的提交
+git log -p -2 显示最近两次提交的不同点
+git log --author 查看具体某个作者的提交 
+git log --online 输出简要的信息
+git log --graph 以一个简单的线串联起整个提交历史
+git log 输出信息的定制
+

@@ -1,0 +1,10 @@
+之前我们是使用branch 命令创建分支
+使用checkout在不同分支之间切换，但是落叶终究要归根，分出去的枝叶也终究要汇总
+
+这个时候我们可使用merge命令进行分支的合并
+
+冲突与解决
+master分离出dev分支，对a文件修改后提交，之后跑到master分支，也对a修改后提交，之后merge dev分支，此时冲突产生
+git diff --name-only --diff-filter=U 查看冲突的文件
+git ls-files -u  也可以显示没被合并的文件
+之后使用vim对文件进行修改或者直接用开发工具进行修改

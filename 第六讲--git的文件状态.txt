@@ -1,0 +1,17 @@
+git status
+    用于查看git的状态
+git rm
+    用于git文件的删除操作
+    如果只是 git rm --cache 仅删除暂存区里的文件
+    如果不加--cache 会删除工作区里的文件 并提交到暂存区
+git checkout
+    直接加文件名   从暂存区将文件恢复到工作区，如果工作区已经有该文件，则会选择覆盖
+    加了【分支名】 +文件名  则表示从分支名为所写的分支名中拉取文件 并覆盖工作区里的文件
+
+
+
+ 新建文件--->Untracked
+ 使用add命令将新建的文件加入到暂存区--->Staged
+ 使用commit命令将暂存区的文件提交到本地仓库--->Unmodified
+ 如果对Unmodified状态的文件进行修改---> modified
+ 如果对Unmodified状态的文件进行remove操作--->Untracked

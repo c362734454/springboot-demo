@@ -1,0 +1,12 @@
+ 1.将不必要的文件add
+ 2.上次提交觉得是错的
+ 3.不想改变暂存区内容，只是想调整提交的信息
+ 4.版本回滚
+
+ git reset HEAD 文件名  移除不必要的添加到暂存区的文件
+ git reset HEAD^ 或者 commitid 去掉上一次的提交 
+ git reset --soft  HEAD^ 修改上次提交的信息吧即commit -m "修改这里的内容"
+
+ git reset --soft 只是将HEAD引用指向指定的提交，工作区跟暂存区的内容不会改变
+ git reset --mixed （默认选项）将HEAD指向指定的提交，暂存区的内容随之改变，工作区内容不变
+ git reset --hard 将HEAD指向指定的提交，暂存区跟工作区都会改变
