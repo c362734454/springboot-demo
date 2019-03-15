@@ -1,0 +1,27 @@
+windows下面安装git：
+	下载git
+	    到git官网上下载，自行选择合适系统的：	https://git-scm.com/
+	    如果是win版本的，直接按默认安装即可
+
+linux上安装，以centos 6.6为例：
+    yum命令安装：
+	    yum install git
+	    yum install 安装的git不是最新版本，如需最新版本需要自行编译
+
+	编译git源码安装：
+		到下面的网站下载合适的版本
+		    https://mirrors.edge.kernel.org/pub/software/scm/git/
+		安装git的依赖项
+			yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+			yum install  gcc perl-ExtUtils-MakeMaker
+		移除已经安装的git
+			yum remove git
+
+		cd git 解压目录
+		预编译git
+			./configure --prefix=/usr/local/git_2.9.5
+		编译并安装git
+			make && make install
+		将git的脚本软连接到/usr/bin/ 目录下
+		ln -s /usr/local/git_2.9.5/bin/* /usr/bin/
+    git安装完成
